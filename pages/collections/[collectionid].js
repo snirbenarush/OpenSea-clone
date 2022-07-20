@@ -46,7 +46,7 @@ const Collection = () => {
     if (!provider) return
 
     const sdk = new ThirdwebSDK(
-      provider.getSigner(),
+      provider.getSigner()
       // 'https://eth-rinkeby.alchemyapi.io/v2/b3dM2aUU7LoBBJGIB6I2wjNU2HB4nuDF'
       // 'https://rinkeby.infura.io/v3/0e745672da9d46cc9d8cfa8dc13093c2'
     )
@@ -67,7 +67,7 @@ const Collection = () => {
     if (!provider) return
 
     const sdk = new ThirdwebSDK(
-      provider.getSigner(),
+      provider.getSigner()
       // 'https://eth-rinkeby.alchemyapi.io/v2/b3dM2aUU7LoBBJGIB6I2wjNU2HB4nuDF'
       // 'https://rinkeby.infura.io/v3/0e745672da9d46cc9d8cfa8dc13093c2'
     )
@@ -81,7 +81,6 @@ const Collection = () => {
     if (!marketPlaceModule) return
     ;(async () => {
       setListings(await marketPlaceModule.getAllListings())
-      console.log(listings + "lsiefej");
     })()
   }, [marketPlaceModule])
 
@@ -99,8 +98,6 @@ const Collection = () => {
     }`
 
     const collectionData = await sanityClient.fetch(query)
-
-    
 
     // the query returns 1 object inside of an array
     await setCollection(collectionData[0])
@@ -184,7 +181,7 @@ const Collection = () => {
             </div>
             <div className={style.collectionStat}>
               <div className={style.statValue}>
-              <img
+                <img
                   src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"
                   alt="eth"
                   className={style.ethLogo}
@@ -221,7 +218,7 @@ const Collection = () => {
         ))}
       </div>
     </div>
-  ) 
+  )
 }
 
 export default Collection
