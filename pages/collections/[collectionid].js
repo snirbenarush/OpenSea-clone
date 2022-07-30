@@ -107,7 +107,7 @@ const Collection = () => {
     fetchCollectionData()
   }, [collectionid])
 
-  console.log(router.query)
+  // console.log(router.query)
   console.log(router.query.collectionid)
   return (
     <div className="overflow-hidden">
